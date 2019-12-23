@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Dec 15 21:06:37 2019
+# Process ID: 4676
+# Current directory: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27496 D:\workspace\SynthesisDesign\base\standard_MIPS_CPU\MIPSfpga_axi4_ddr\MIPSfpga_axi4_ddr.xpr
+# Log file: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/vivado.log
+# Journal file: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workspace/SynthesisDesign/base/standard_MIPS_CPU/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/Vivado/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:48 . Memory (MB): peak = 759.363 ; gain = 106.188
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Dec 15 21:08:48 2019] Launched synth_1...
+Run output will be captured here: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1/runme.log
+[Sun Dec 15 21:08:48 2019] Launched impl_1...
+Run output will be captured here: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Sun Dec 15 21:14:33 2019] Launched synth_1...
+Run output will be captured here: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -jobs 4
+[Sun Dec 15 21:19:10 2019] Launched synth_1...
+Run output will be captured here: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1/runme.log
+[Sun Dec 15 21:19:10 2019] Launched impl_1...
+Run output will be captured here: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 15 21:19:29 2019...

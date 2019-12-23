@@ -1,0 +1,32 @@
+mkdir -p D:/workspace/SynthesisDesign/HOS/hos-mips/obj
+make  -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.build
+rm -f .builtinlist.tmp
+touch .builtinlist.tmp
+make -f Makefile.subdir OBJPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel LOCALPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore BUILTINLIST=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+Enter D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/lib
+mkdir -p D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/lib
+make -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.subdir -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/lib KTREE=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore OBJPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/lib LOCALPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/lib BUILTINLIST=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+echo D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/lib/builtin.o >> D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+Enter D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs
+mkdir -p D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs
+make -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.subdir -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs KTREE=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore OBJPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs LOCALPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs BUILTINLIST=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+Enter D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/devs
+mkdir -p D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/devs
+make -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.subdir -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/devs KTREE=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore OBJPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/devs LOCALPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/devs BUILTINLIST=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+echo D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/devs/builtin.o >> D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+Enter D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/pipe
+mkdir -p D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/pipe
+make -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.subdir -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/pipe KTREE=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore OBJPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/pipe LOCALPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/pipe BUILTINLIST=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+echo D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/pipe/builtin.o >> D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+Enter D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/vfs
+mkdir -p D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/vfs
+make -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.subdir -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/vfs KTREE=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore OBJPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/vfs LOCALPATH=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/fs/vfs BUILTINLIST=D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+echo D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/vfs/builtin.o >> D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+echo D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/builtin.o >> D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+echo D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/builtin.o >> D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/.builtinlist.tmp
+Building uCore Kernel for mips
+mips-mti-elf-ld  -n -G 0 -static -EL -nostdlib -r -o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/kernel-builtin.o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/lib/builtin.o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/devs/builtin.o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/pipe/builtin.o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/vfs/builtin.o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/fs/builtin.o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/builtin.o
+make KERNEL_BUILTIN=D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/kernel-builtin.o  -C D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore -f D:/workspace/SynthesisDesign/HOS/hos-mips/kern-ucore/Makefile.image all
+Linking uCore
+sed 's%_FILE_%D:/workspace/SynthesisDesign/HOS/hos-mips/obj/sfs-orig.img%g' tools/initrd_piggy.S.in > D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/initrd_piggy.S
+mips-mti-elf-as -g --gen-debug -EL -mno-micromips -msoft-float -march=m14k D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/initrd_piggy.S -o D:/workspace/SynthesisDesign/HOS/hos-mips/obj/kernel/initrd.img.o

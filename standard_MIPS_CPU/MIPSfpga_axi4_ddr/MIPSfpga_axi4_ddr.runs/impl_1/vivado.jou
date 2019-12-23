@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Dec 15 22:25:29 2019
+# Process ID: 4328
+# Current directory: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1
+# Command line: vivado.exe -log MIPSfpga_system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MIPSfpga_system_wrapper.tcl -notrace
+# Log file: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1/MIPSfpga_system_wrapper.vdi
+# Journal file: D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source MIPSfpga_system_wrapper.tcl -notrace
