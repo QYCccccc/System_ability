@@ -67,6 +67,9 @@ static void delay(void)
 
 static bool serial_exists = 0;
 
+
+// 串口的初始化，初始化的工作最主要的是打开系统对串口中断的响应，
+// 通过指明中断号来调用 pic_enable 函数完成。
 static void com2_init(void)
 {
 /*	volatile unsigned char *uart = (unsigned char *)COM2;

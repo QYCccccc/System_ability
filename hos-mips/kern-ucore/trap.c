@@ -108,6 +108,8 @@ static void interrupt_handler(struct trapframe *tf)
 			case 7://corrected by xiaohan! Accoring to priority code.
 				clock_int_handler(NULL);
 				break;
+			
+			//完善中断处理例程入口函数的中断分发部分
 			//case xilinx INTC:
 			case 6:{
 				unsigned pic_status = getpic_status();

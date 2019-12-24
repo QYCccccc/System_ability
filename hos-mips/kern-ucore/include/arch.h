@@ -84,7 +84,7 @@ static inline void outw(uint32_t port, uint32_t data)
 #define COM1            0xb0400000
 #define COM1_IRQ        7  //硬件中断源对应的操作系统中断号，硬件中断源0-5对应 IP2-7 IM2-7
 
-#define COM2 			0xb0A10000
+#define COM2 			0xb0A10000	//注册蓝牙串口硬件模块的分配的地址
 #define COM2_IRQ        6
 
 #define TIMER0_IRQ       0
