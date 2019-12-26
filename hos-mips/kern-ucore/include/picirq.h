@@ -17,5 +17,6 @@ void xilinx_intc_init(void); // added by xiaohan for simplicity.
 //对应中断控制器中的硬件中断源
 #define  INTC_COM1   (1<<5) 
 #define  INTC_COM2   (1<<4)
-
+#define  INTC_COM3	 (1<<3)
+#define  INTC_COM4   (1<<2)
 #endif /* !__KERN_DRIVER_PICIRQ_H__ */

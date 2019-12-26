@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "picirq.h": "c"
+        "picirq.h": "c",
+        "trap.h": "c"
     }
 }

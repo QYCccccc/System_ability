@@ -94,7 +94,8 @@ static void interrupt_handler(struct trapframe *tf)
 	extern clock_int_handler(void *);
 	extern serial_int_handler(void *);
 	extern bluetooth_int_handler(void *);
-
+	extern distSensor_int_handler(void *opaque);
+	extern distSensor_2_int_handler(void *opaque);
 //        extern keyboard_int_handler();
 	
 	int i;
@@ -122,6 +123,10 @@ static void interrupt_handler(struct trapframe *tf)
 				// COM2 bluetooth
 				else if(pic_status == INTC_COM2)
 					bluetooth_int_handler(NULL); //对应In4为1?
+				else if(pic_status == INTC_COM3)
+					distSensor_int_handler(NULL);
+				else if(pic_status == INTC_COM4)
+					distSensor_2_int_handler(NULL);
 			}break;
 			// case UART2_IRQ:
 			

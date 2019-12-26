@@ -33,10 +33,11 @@
 // #define CAR_TURNRIGHT ((unsigned char)~0xD4)
 #define CAR_TURNLEFT ((unsigned char)0xAC)
 #define CAR_TURNRIGHT ((unsigned char)~0xAC)
+
 void bluetooth_init(void);
 void bluetooth_putc(int c);
 void bcons_putc(int c);
 int bcons_getc(void);
 void bserial_intr(void);
-
+void direction_send(unsigned char data);
 #endif /* !__KERN_DRIVER_CONSOLE_H__ */

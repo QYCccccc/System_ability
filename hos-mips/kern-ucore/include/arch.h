@@ -89,6 +89,11 @@ static inline void outw(uint32_t port, uint32_t data)
 
 #define TIMER0_IRQ       0
 
+#define COM3	0xb0500000
+#define COM3_IRQ 5
+
+#define COM4	0xb0300000
+#define COM4_IRQ	4
 
 //#define KEYBOARD_IRQ    6
 //#define KEYBOARD       0xaf000000

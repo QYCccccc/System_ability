@@ -20,6 +20,8 @@ void __noreturn kern_init(void)
 	pic_init();		// init interrupt controller
 	cons_init();		// init the console
 	bluetooth_init(); 	// init the bluetooth
+	distSensor_init();
+	distSensor_2_init();
 	
 	clock_init();		// init clock interrupt
 
