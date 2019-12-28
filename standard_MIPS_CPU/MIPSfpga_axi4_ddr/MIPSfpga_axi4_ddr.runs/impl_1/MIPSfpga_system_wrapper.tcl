@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -68,17 +69,17 @@ set rc [catch {
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.cache/wt [current_project]
-  set_property parent.project_path D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.xpr [current_project]
-  set_property ip_repo_paths D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/ip_repo [current_project]
+  set_property webtalk.parent_dir C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.cache/wt [current_project]
+  set_property parent.project_path C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.xpr [current_project]
+  set_property ip_repo_paths C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo [current_project]
   set_property ip_cache_permissions disable [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1/MIPSfpga_system_wrapper.dcp
+  add_files -quiet C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.runs/synth_1/MIPSfpga_system_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/MIPSfpga_system.bd
+  add_files C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/MIPSfpga_system.bd
   set_param project.isImplRun false
-  read_xdc D:/workspace/SynthesisDesign/base/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/constrs_1/imports/system_ability_2018/MIPSfpga_system.xdc
+  read_xdc C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.srcs/constrs_1/imports/system_ability_2018/MIPSfpga_system.xdc
   set_param project.isImplRun true
   link_design -top MIPSfpga_system_wrapper -part xc7a100tcsg324-1
   set_param project.isImplRun false

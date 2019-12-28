@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sun Dec 15 21:59:35 2019
-//Host        : LAPTOP-AMQVVGCO running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+//Date        : Sat Dec 28 13:42:10 2019
+//Host        : QYC running 64-bit major release  (build 9200)
 //Command     : generate_target MIPSfpga_system_wrapper.bd
 //Design      : MIPSfpga_system_wrapper
 //Purpose     : IP block netlist
@@ -33,11 +33,16 @@ module MIPSfpga_system_wrapper
     JB4,
     JB7,
     JB8,
+    JD10,
+    JD3,
+    JD4,
+    JD9,
     PWM_OUT,
     UART2_RXD_OUT,
     UART2_TXD_IN,
     UART_RXD_OUT,
-    UART_TXD_IN);
+    UART_TXD_IN,
+    beeper_out);
   input CLK100MHZ;
   input CPU_RESETN;
   output [12:0]DDR2_SDRAM_addr;
@@ -61,11 +66,16 @@ module MIPSfpga_system_wrapper
   input JB4;
   input JB7;
   input JB8;
+  input JD10;
+  output JD3;
+  input JD4;
+  output JD9;
   output [3:0]PWM_OUT;
   output UART2_RXD_OUT;
   input UART2_TXD_IN;
   output UART_RXD_OUT;
   input UART_TXD_IN;
+  output [1:0]beeper_out;
 
   wire CLK100MHZ;
   wire CPU_RESETN;
@@ -90,11 +100,16 @@ module MIPSfpga_system_wrapper
   wire JB4;
   wire JB7;
   wire JB8;
+  wire JD10;
+  wire JD3;
+  wire JD4;
+  wire JD9;
   wire [3:0]PWM_OUT;
   wire UART2_RXD_OUT;
   wire UART2_TXD_IN;
   wire UART_RXD_OUT;
   wire UART_TXD_IN;
+  wire [1:0]beeper_out;
 
   MIPSfpga_system MIPSfpga_system_i
        (.CLK100MHZ(CLK100MHZ),
@@ -120,9 +135,14 @@ module MIPSfpga_system_wrapper
         .JB4(JB4),
         .JB7(JB7),
         .JB8(JB8),
+        .JD10(JD10),
+        .JD3(JD3),
+        .JD4(JD4),
+        .JD9(JD9),
         .PWM_OUT(PWM_OUT),
         .UART2_RXD_OUT(UART2_RXD_OUT),
         .UART2_TXD_IN(UART2_TXD_IN),
         .UART_RXD_OUT(UART_RXD_OUT),
-        .UART_TXD_IN(UART_TXD_IN));
+        .UART_TXD_IN(UART_TXD_IN),
+        .beeper_out(beeper_out));
 endmodule

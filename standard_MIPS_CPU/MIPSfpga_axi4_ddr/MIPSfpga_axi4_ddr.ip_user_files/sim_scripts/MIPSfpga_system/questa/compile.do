@@ -56,11 +56,11 @@ vmap axi_clock_converter_v2_1_16 questa_lib/msim/axi_clock_converter_v2_1_16
 vmap axi_dwidth_converter_v2_1_17 questa_lib/msim/axi_dwidth_converter_v2_1_17
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" \
-"D:/software/Vivado/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"D:/software/Vivado/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
-"D:/software/Vivado/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" \
 "../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up/mvp_cregister.v" \
@@ -426,6 +426,16 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/source
 "../../../bd/MIPSfpga_system/ipshared/8148/src/PWM_Int_4_Controller.v" \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_PWM_Int_4_0_0/sim/MIPSfpga_system_PWM_Int_4_0_0.v" \
 
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_axi_uart16550_0_2/sim/MIPSfpga_system_axi_uart16550_0_2.vhd" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_axi_uart16550_0_3/sim/MIPSfpga_system_axi_uart16550_0_3.vhd" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" \
+"../../../bd/MIPSfpga_system/ipshared/dc9a/hdl/PWM_w_Int_v1_0_S00_AXI.v" \
+"../../../bd/MIPSfpga_system/ipshared/dc9a/hdl/PWM_w_Int_v1_0.v" \
+"../../../bd/MIPSfpga_system/ipshared/dc9a/hdl/PWM_Controller_Int.v" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_PWM_w_Int_0_0/sim/MIPSfpga_system_PWM_w_Int_0_0.v" \
+
 vlog -work axi_protocol_converter_v2_1_17 -64 "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" \
 "../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
@@ -436,6 +446,12 @@ vlog -work axi_dwidth_converter_v2_1_17 -64 "+incdir+../../../../MIPSfpga_axi4_d
 "../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/2839/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/ipshared/bd6d/rtl_up" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/b65a" "+incdir+../../../../MIPSfpga_axi4_ddr.srcs/sources_1/bd/MIPSfpga_system/ipshared/ec67/hdl" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_8/sim/MIPSfpga_system_auto_ds_8.v" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_pc_7/sim/MIPSfpga_system_auto_pc_7.v" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_7/sim/MIPSfpga_system_auto_ds_7.v" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_pc_6/sim/MIPSfpga_system_auto_pc_6.v" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_6/sim/MIPSfpga_system_auto_ds_6.v" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_pc_5/sim/MIPSfpga_system_auto_pc_5.v" \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_5/sim/MIPSfpga_system_auto_ds_5.v" \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_pc_4/sim/MIPSfpga_system_auto_pc_4.v" \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_auto_ds_4/sim/MIPSfpga_system_auto_ds_4.v" \

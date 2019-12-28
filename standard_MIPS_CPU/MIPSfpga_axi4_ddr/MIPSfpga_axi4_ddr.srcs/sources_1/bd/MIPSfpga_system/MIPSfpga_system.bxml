@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="MIPSfpga_system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1576418464"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1576418464"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1576418464"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1576418464"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1577511790"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1577511790"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1577511790"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1577511790"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\MIPSfpga_system_MIPS_MicroAptiv_UP_0_0\MIPSfpga_system_MIPS_MicroAptiv_UP_0_0.xci" Type="IP">
         <Instance HierarchyPath="MIPS_MicroAptiv_UP_0"/>
@@ -204,6 +204,78 @@
       </File>
       <File Name="ip\MIPSfpga_system_PWM_Int_4_0_0\MIPSfpga_system_PWM_Int_4_0_0.xci" Type="IP">
         <Instance HierarchyPath="PWM_Int_4_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_axi_uart16550_0_2\MIPSfpga_system_axi_uart16550_0_2.xci" Type="IP">
+        <Instance HierarchyPath="axi_uart16550_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_axi_uart16550_0_3\MIPSfpga_system_axi_uart16550_0_3.xci" Type="IP">
+        <Instance HierarchyPath="axi_uart16550_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_PWM_w_Int_0_0\MIPSfpga_system_PWM_w_Int_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PWM_w_Int_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_auto_ds_8\MIPSfpga_system_auto_ds_8.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/m09_couplers/auto_ds"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_auto_pc_7\MIPSfpga_system_auto_pc_7.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/m09_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_auto_ds_7\MIPSfpga_system_auto_ds_7.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/m08_couplers/auto_ds"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_auto_pc_6\MIPSfpga_system_auto_pc_6.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/m08_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_auto_ds_6\MIPSfpga_system_auto_ds_6.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/m07_couplers/auto_ds"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\MIPSfpga_system_auto_pc_5\MIPSfpga_system_auto_pc_5.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/m07_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

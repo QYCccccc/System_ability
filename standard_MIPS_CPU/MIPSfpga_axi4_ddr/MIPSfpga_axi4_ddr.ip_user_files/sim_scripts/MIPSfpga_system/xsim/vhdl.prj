@@ -7,5 +7,7 @@ vhdl xil_defaultlib  \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_util_ds_buf_0_0/util_ds_buf.vhd" \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_util_ds_buf_0_0/sim/MIPSfpga_system_util_ds_buf_0_0.vhd" \
 "../../../bd/MIPSfpga_system/ip/MIPSfpga_system_axi_uart16550_0_1/sim/MIPSfpga_system_axi_uart16550_0_1.vhd" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_axi_uart16550_0_2/sim/MIPSfpga_system_axi_uart16550_0_2.vhd" \
+"../../../bd/MIPSfpga_system/ip/MIPSfpga_system_axi_uart16550_0_3/sim/MIPSfpga_system_axi_uart16550_0_3.vhd" \
 
 nosort
