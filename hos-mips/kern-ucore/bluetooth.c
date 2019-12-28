@@ -207,6 +207,10 @@ void bluetooth_int_handler(void *opaque)
 		else if(value == 'D') mode = CAR_BACKWARD;
 		else if(value == 'L') mode = CAR_TURNLEFT;
 		else if(value == 'R') mode = CAR_TURNRIGHT;
+		else if(value == 'M')
+		{
+			musicPlay();
+		}
 		else mode = 0;
 		direction_send(mode);
 	}

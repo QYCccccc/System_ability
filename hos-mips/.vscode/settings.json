@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "picirq.h": "c",
-        "trap.h": "c"
+        "trap.h": "c",
+        "arch.h": "c"
     }
 }

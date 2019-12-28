@@ -82,7 +82,7 @@ static inline void outw(uint32_t port, uint32_t data)
 
 //#define ISA_BASE        0xbfd00000
 #define COM1            0xb0400000
-#define COM1_IRQ        7  //硬件中断源对应的操作系统中断号，硬件中断源0-5对应 IP2-7 IM2-7
+#define COM1_IRQ        7  //硬件中断源对应的CPU中断号，硬件中断源0-5对应 IP2-7 IM2-7
 
 #define COM2 			0xb0A10000	//注册蓝牙串口硬件模块的分配的地址
 #define COM2_IRQ        6
@@ -95,6 +95,11 @@ static inline void outw(uint32_t port, uint32_t data)
 #define COM4	0xb0300000
 #define COM4_IRQ	4
 
+//无源蜂鸣器频率调节
+#define PWM_INT_BASE	0xB1C00000
+
+//CPU时钟频率
+#define CLK_FREQ 50000000
 //#define KEYBOARD_IRQ    6
 //#define KEYBOARD       0xaf000000
 
