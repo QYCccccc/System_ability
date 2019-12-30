@@ -39,25 +39,7 @@ typedef struct
 }tNote;
 
 const tNote MyScore[]=
-{ //Always with me
-	{0,TT/2},{M1,TT/8},{M2,TT/8},{M3,TT/8},{M1,TT/8},{M5,TT/4+TT/8},{M3,TT/8},
-	{M2,TT/4},{M5,TT/4},{M2,TT/4},{M1,TT/8},{L6,TT/8},{M3,TT/4+TT/8},{M1,TT/8},
-	{L7,TT/2},{M1,TT/8},{L7,TT/8},{L6,TT/4},{L7,TT/4},{M1,TT/8},{M2,TT/8},
-	{L5,TT/4},{M1,TT/4},{M2,TT/8},{M3,TT/8},{M4,TT/4},{M4,TT/8},{M3,TT/8},{M2,TT/8},{M1,TT/8},
-	{M2,TT/2},{M1,TT/8},{M2,TT/8},{M3,TT/8},{M1,TT/8},{M5,TT/4+TT/8},{M3,TT/8},
-	{M2,TT/4},{M5,TT/4},{M2,TT/4},{M1,TT/8},{L6,TT/8},{L6,TT/4},{L7,TT/8},{M1,TT/8},
-	{L5,TT/2},{0,TT/8},{L5,TT/8},{L6,TT/4},{L7,TT/4},{M1,TT/8},{M2,TT/8},//question
-	{L5,TT/4},{M1,TT/4},{M2,TT/8},{M3,TT/8},{M4,TT/4},{M4,TT/8},{M3,TT/8},{M2,TT/8},{M1,TT/8},{M1,TT/2+TT/4},
-
-	{0,TT/2},{M3,TT/8},{M4,TT/8},{M5,TT/4},{M5,TT/4},{M5,TT/4},{M5,TT/4},{M5,TT/8},{M6,TT/8},{M5,TT/8},{M4,TT/8},
-	{M3,TT/4},{M3,TT/4},{M3,TT/4},{M3,TT/4},{M3,TT/8},{M4,TT/8},{M3,TT/8},{M2,TT/8},
-	{M1,TT/4},{M1,TT/4},{M1,TT/8},{L7,TT/8},{L6,TT/4},{L7,TT/4},{L7,TT/8},{M1,TT/8},
-	{M2,TT/4},{M2,TT/8},{M3,TT/8},{M2,TT/8},{M3,TT/8},{M2,TT/2},{M3,TT/8},{M4,TT/8},
-	{M5,TT/4},{M5,TT/4},{M5,TT/4},{M5,TT/4},{M5,TT/8},{M6,TT/8},{M5,TT/8},{M4,TT/8},
-	{M3,TT/4},{M3,TT/4},{M3,TT/4},{M3,TT/8},{M4,TT/8},{M3,TT/8},{M2,TT/8},{M1,TT/8},{L7,TT/8},
-	{L6,TT/4},{L6,TT/8},{L7,TT/8},{M1,TT/8},{M2,TT/8},{L5,TT/4},{M1,TT/4},{M2,TT/8},{M3,TT/8},
-	{M2,TT/4+TT/8},{M2,TT/8},{M2,TT/8},{M1,TT/8},{M1,TT/2+TT/4},  
-	
+{ //Always with me  
 	{0,TT/2},{M1,TT/8},{M2,TT/8},{M3,TT/8},{M1,TT/8},{M5,TT/4+TT/8},{M3,TT/8},
 	{M2,TT/4},{M5,TT/4},{M2,TT/4},{M1,TT/8},{L6,TT/8},{M3,TT/4+TT/8},{M1,TT/8},
 	{L7,TT/2},{M1,TT/8},{L7,TT/8},{L6,TT/4},{L7,TT/4},{M1,TT/8},{M2,TT/8},
