@@ -3,6 +3,18 @@
         "picirq.h": "c",
         "trap.h": "c",
         "arch.h": "c",
-        "memlayout.h": "c"
+        "memlayout.h": "c",
+        "*.tcc": "cpp",
+        "algorithm": "cpp",
+        "memory": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "*.inc": "cpp",
+        "*.def": "cpp"
     }
 }

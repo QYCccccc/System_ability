@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="c:/users/qyc/desktop/finished/standard_mips_cpu/mipsfpga_axi4_ddr/mipsfpga_axi4_ddr.tmp/pwm_int_4_v1_0_project/PWM_Int_4_v1_0_project.xpr">
+<Project Version="7" Minor="38" Path="c:/users/qyc/desktop/system_ability_2019/standard_mips_cpu/mipsfpga_axi4_ddr/mipsfpga_axi4_ddr.tmp/pwm_int_4_v1_0_project/PWM_Int_4_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="3c2cac321bdd4d56ac65258320cce8c3"/>
+    <Option Name="Id" Val="34c24ebc4bc945e6b49eb3361d1880fd"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -21,7 +21,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -60,34 +60,34 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/src/PWM_Int_4_Controller.v">
+      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/src/PWM_Int_4_Controller.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/hdl/PWM_Int_4_v1_0_S00_AXI.v">
+      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/hdl/PWM_Int_4_v1_0_S00_AXI.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/hdl/PWM_Int_4_v1_0.v">
+      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/hdl/PWM_Int_4_v1_0.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/component.xml">
+      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="PWM_Int_4_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/src/PWM_Int_4_Controller.v"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/src/PWM_Int_4_Controller.v"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -97,7 +97,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
-      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/finished/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/PWM_Int_4_Controller_testbench.v">
+      <File Path="$PPRDIR/../../../../../../../../Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/ip_repo/PWM_Int_4_1.0/PWM_Int_4_Controller_testbench.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
           <Attr Name="UsedIn" Val="testbench"/>

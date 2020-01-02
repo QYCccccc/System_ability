@@ -3,8 +3,9 @@
 
 #define GPIO_CAR_PORTS        0xB0600000
 
+#define PWM_INT_4_BASE 0xB0C00000
 #define output (*WRITE_IO(GPIO_CAR_PORTS))
-
+#define output_pwm (*WRITE_IO(PWM_INT_4_BASE))
 
 
 // 定义 马达驱动接口
@@ -25,7 +26,7 @@
 #define DIR_SERIAL_ON   (output = output | ((1<<DIR_SERIAL)))
 #define DIR_SERIAL_OFF (output = output & (~(1<<DIR_SERIAL)))
 
-#define PWM_ALL_ON (output = output | 0xf0)
+#define PWM_ALL_ON (output_pwm = 0x0)
 
 #define CAR_FORWARD ((unsigned char)0xE1) //1110 0001
 #define CAR_BACKWARD ((unsigned char)~0xE1)

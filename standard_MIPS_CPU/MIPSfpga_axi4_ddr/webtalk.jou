@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Wed Jan  1 16:11:38 2020
+# Process ID: 12268
+# Current directory: C:/Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/MIPSfpga_axi4_ddr
+# Command line: wbtcv.exe -mode batch -source c:/users/qyc/desktop/system_ability_2019/standard_mips_cpu/mipsfpga_axi4_ddr/mipsfpga_axi4_ddr.tmp/pwm_w_int_v1_0_project/PWM_w_Int_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: C:/Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/MIPSfpga_axi4_ddr/webtalk.log
+# Journal file: C:/Users/QYC/Desktop/System_ability_2019/standard_MIPS_CPU/MIPSfpga_axi4_ddr\webtalk.jou
+#-----------------------------------------------------------
+source c:/users/qyc/desktop/system_ability_2019/standard_mips_cpu/mipsfpga_axi4_ddr/mipsfpga_axi4_ddr.tmp/pwm_w_int_v1_0_project/PWM_w_Int_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace

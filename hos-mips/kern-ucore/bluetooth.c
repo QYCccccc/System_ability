@@ -44,27 +44,6 @@ static void delay(void)
 #define COM_LSR_TXRDY   0x20    // Transmit buffer avail
 #define COM_LSR_TSRE    0x40    // Transmitter off
 
-/*#define COM_RX          0	// In:  Receive buffer (DLAB=0)
-#define COM_TX          0	// Out: Transmit buffer (DLAB=0)
-#define COM_DLL         0	// Out: Divisor Latch Low (DLAB=1)
-#define COM_DLM         1	// Out: Divisor Latch High (DLAB=1)
-#define COM_IER         1	// Out: Interrupt Enable Register
-#define COM_IER_RDI     0x01	// Enable receiver data interrupt
-#define COM_IIR         2	// In:  Interrupt ID Register
-#define COM_FCR         2	// Out: FIFO Control Register
-#define COM_LCR         3	// Out: Line Control Register
-#define COM_LCR_DLAB    0x80	// Divisor latch access bit
-#define COM_LCR_WLEN8   0x03	// Wordlength: 8 bits
-#define COM_MCR         4	// Out: Modem Control Register
-#define COM_MCR_RTS     0x02	// RTS complement
-#define COM_MCR_DTR     0x01	// DTR complement
-#define COM_MCR_OUT2    0x08	// Out2 complement
-#define COM_LSR         5	// In:  Line Status Register
-#define COM_LSR_DATA    0x01	// Data available
-#define COM_LSR_TXRDY   0x20	// Transmit buffer avail
-#define COM_LSR_TSRE    0x40	// Transmitter off
-*/
-
 static bool serial_exists = 0;
 
 
@@ -72,32 +51,6 @@ static bool serial_exists = 0;
 // 通过指明中断号来调用 pic_enable 函数完成。
 static void com2_init(void)
 {
-/*	volatile unsigned char *uart = (unsigned char *)COM2;
-	if (serial_exists)
-		return;
-	serial_exists = 1;
-#ifdef MACH_QEMU
-	// Turn off the FIFO
-	outb(COM2 + COM_FCR, 0);
-	// Set speed; requires DLAB latch
-	outb(COM2 + COM_LCR, COM_LCR_DLAB);
-	outb(COM2 + COM_DLL, (uint8_t) (115200 / 9600));
-	outb(COM2 + COM_DLM, 0);
-
-	// 8 data bits, 1 stop bit, parity off; turn off DLAB latch
-	outb(COM2 + COM_LCR, COM_LCR_WLEN8 & ~COM_LCR_DLAB);
-
-	// No modem controls
-	outb(COM2 + COM_MCR, 0);
-	// Enable rcv interrupts
-	outb(COM2 + COM_IER, COM_IER_RDI);
-#elif defined MACH_FPGA
-	//TODO
-#endif
-
-	pic_enable(COM2_IRQ);
-        pic_enable(KEYBOARD_IRQ);
-*/
     volatile unsigned char *uart = (unsigned char *)COM2;
     if (serial_exists)
         return;
@@ -109,47 +62,11 @@ static void com2_init(void)
     outw(COM2 + COM_DLM, 0);
     outw(COM2 + COM_LCR, COM_LCR_WLEN8);
     outw(COM2 + COM_IER, 0);
-    // *WRITE_IO(COM2 + COM_IER)=0x00000000;
-    // delay();
-    // *WRITE_IO(COM2 + COM_THR)=0x0000000a;
-    // delay();
-    // *WRITE_IO(COM2 + COM_THR)=0x0000000d;
-    // delay();
-    // *WRITE_IO(COM2 + COM_THR)=0x00000055;
-    // delay();
-    // outw(COM2 + COM_THR, 0x00000061);
-    // delay();
-    // outw(COM2 + COM_THR, 0x00000072);
-    // delay();
-    // outw(COM2 + COM_THR, 0x00000074);
-    // delay();
     outw(COM2 + COM_IER, COM_IER_RDI);
     delay();
 
     pic_enable(COM2_IRQ);
-    //pic_enable(KEYBOARD_IRQ);
 }
-
-static void serial_putc_sub(int c)
-{
-	if ((inw(COM2 + COM_IER) & COM_IER_RDI) == 0) delay();
-    //delay();
-    outw(COM2 + COM_THR, c & 0xFF);
-    delay();
-}
-
-/* bserial_putc - print character to serial port */
-static void serial_putc(int c)
-{
-	if (c == '\b') {
-		serial_putc_sub('\b');
-		serial_putc_sub(' ');
-		serial_putc_sub('\b');
-	} else {
-		serial_putc_sub(c);
-	}
-}
-
 /* serial_proc_data - get data from serial port */
 static int serial_proc_data(void)
 {
@@ -213,33 +130,10 @@ void bluetooth_int_handler(void *opaque)
 		}
 		else mode = 0;
 		direction_send(mode);
+		PWM_ALL_ON;
 	}
     turnon_intc(INTC_COM2);
 }
-
-//key board handler
-//static const char KEYCODE_MAP[256] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0,0,113,49,0,0,0,122,115,97,119,50,0,0,99,120,100,101,52,51,0,0,32,118,102,116,114,53,0,0,110,98,104,103,121,54,0,0,0,109,106,117,55,56,0,0,44,107,105,111,48,57,0,0,46,47,108,59,112,45,0,0,0,39,0,91,61,0,0,0,0,13,93,0,92,0,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,126,0,0,0,0,0,0,81,33,0,0,0,90,83,65,87,64,0,0,67,88,68,69,36,35,0,0,32,86,70,84,82,37,0,0,78,66,72,71,89,94,0,0,0,77,74,85,38,42,0,0,60,75,73,79,41,40,0,0,62,63,76,58,80,95,0,0,0,34,0,123,43,0,0,0,0,13,125,0,124,0,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-
-//#define DEBUG_KBD
-
-#ifdef DEBUG_KBD
-#include <stdio.h>
-#endif
-
-/*void keyboard_int_handler()
-{
-  int c = *((int*)KEYBOARD);
-  if (c < 0 || c > 256)
-	  return;
-#ifdef DEBUG_KBD
-  kprintf("input key c = %d\r\n", c);
-#endif
-  c = KEYCODE_MAP[c];
-  if (c == 0) return;
-  extern void dev_stdin_write(char c);
-  dev_stdin_write(c);
-}
-*/
 /* *
  * Here we manage the console input buffer, where we stash characters
  * received from the keyboard or serial port whenever the corresponding
@@ -288,21 +182,6 @@ void bluetooth_init(void)
 		kprintf("serial port does not exist!!\n\r");
 	}
 }
-
-/* cons_putc - print a single character @c to console devices */
-void bluetooth_putc(int c)
-{
-	bool intr_flag;
-	local_intr_save(intr_flag);
-	{
-		serial_putc(c);
-//#ifdef MACH_FPGA
-//		vga_putch(c);
-//#endif
-	}
-	local_intr_restore(intr_flag);
-}
-
 /* *
  * cons_getc - return the next input character from console,
  * or 0 if none waiting.
@@ -363,46 +242,4 @@ void direction_send(unsigned char data){
 void delay_1(){
 	volatile unsigned int j;
 	for (j = 0; j < (5); j++) ;	// delay 	
-}
-
-/* 
- * 功能：整数按照进制转换为字符串 
- * 的作用是存储整数的每一位 
-*/  
-char* itoa(int num, char * str, int radix)
-{
-    char index[]="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";//索引表
-    unsigned unum;//存放要转换的整数的绝对值,转换的整数可能是负数
-    int i=0,j,k;//i用来指示设置字符串相应位，转换之后i其实就是字符串的长度；转换后顺序是逆序的，有正负的情况，k用来指示调整顺序的开始位置;j用来指示调整顺序时的交换。
- 
-    //获取要转换的整数的绝对值
-    if(radix==10&&num<0)//要转换成十进制数并且是负数
-    {
-        unum=(unsigned)-num;//将num的绝对值赋给unum
-        str[i++]='-';//在字符串最前面设置为'-'号，并且索引加1
-    }
-    else unum=(unsigned)num;//若是num为正，直接赋值给unum
- 
-    //转换部分，注意转换后是逆序的
-    do
-    {
-        str[i++]=index[unum%(unsigned)radix];//取unum的最后一位，并设置为str对应位，指示索引加1
-        unum/=radix;//unum去掉最后一位
-    }while(unum);//直至unum为0退出循环
- 
-    str[i]='\0';//在字符串最后添加'\0'字符，c语言字符串以'\0'结束。
- 
-    //将顺序调整过来
-    if(str[0]=='-') k=1;//如果是负数，符号不用调整，从符号后面开始调整
-    else k=0;//不是负数，全部都要调整
- 
-    char temp;//临时变量，交换两个值时用到
-    for(j=k;j<=(i-1)/2;j++)//头尾一一对称交换，i其实就是字符串的长度，索引最大值比长度少1
-    {
-        temp=str[j];//头部赋值给临时变量
-        str[j]=str[i-1+k-j];//尾部赋值给头部
-        str[i-1+k-j]=temp;//将临时变量的值(其实就是之前的头部值)赋给尾部
-    }
- 
-    return str;//返回转换后的字符串
 }

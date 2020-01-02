@@ -1,0 +1,9 @@
+
+****** Webtalk v2018.2.2 (64-bit)
+  **** SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+  **** IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source c:/users/qyc/desktop/system_ability_2019/standard_mips_cpu/mipsfpga_axi4_ddr/mipsfpga_axi4_ddr.tmp/pwm_w_int_v1_0_project/PWM_w_Int_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'c:/users/qyc/desktop/system_ability_2019/standard_mips_cpu/mipsfpga_axi4_ddr/mipsfpga_axi4_ddr.tmp/pwm_w_int_v1_0_project/PWM_w_Int_v1_0_project.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Wed Jan  1 16:11:43 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Jan  1 16:11:43 2020...
