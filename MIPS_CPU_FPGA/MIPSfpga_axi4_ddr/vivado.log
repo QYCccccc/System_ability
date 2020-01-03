@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Thu Jan  2 12:41:45 2020
+# Process ID: 14868
+# Current directory: C:/Users/QYC/Desktop/System_ability_2019/MIPS_CPU_FPGA/MIPSfpga_axi4_ddr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4272 C:\Users\QYC\Desktop\System_ability_2019\MIPS_CPU_FPGA\MIPSfpga_axi4_ddr\MIPSfpga_axi4_ddr.xpr
+# Log file: C:/Users/QYC/Desktop/System_ability_2019/MIPS_CPU_FPGA/MIPSfpga_axi4_ddr/vivado.log
+# Journal file: C:/Users/QYC/Desktop/System_ability_2019/MIPS_CPU_FPGA/MIPSfpga_axi4_ddr\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/QYC/Desktop/System_ability_2019/MIPS_CPU_FPGA/MIPSfpga_axi4_ddr/MIPSfpga_axi4_ddr.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/QYC/Desktop/finished/standard_MIPS_CPU/MIPSfpga_axi4_ddr' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/QYC/Desktop/System_ability_2019/MIPS_CPU_FPGA/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 905.863 ; gain = 177.094
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan  2 12:42:50 2020...

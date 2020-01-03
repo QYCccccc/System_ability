@@ -67,10 +67,8 @@ void distSensor_int_handler(void *opaque)
 {
     turnoff_intc(INTC_COM3);
     int c = com3_proc_data();
-    PRINT_HEX("\n\r ReceivedData: ", c);
     if(c == 0)
     {
-        kprintf("Sensor1!\n\r");
         direction_send(0);
     }
     turnon_intc(INTC_COM3);

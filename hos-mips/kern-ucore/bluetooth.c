@@ -86,40 +86,13 @@ static int serial_proc_data(void)
 }
 
 void bluetooth_int_handler(void *opaque)
-{//corrected by xiaohan: this is actually not serial interrupt handler!
- //This is in fact External Interrupt Controller's interrupt handler!
- //So, remember to read the EIC to know what interrupt is happening. But for simplicity,
- //here I assume that the EIC only represents serial's interrupt. Other interrupt sources are neglected.
- //Next, rememer to write EIC to tell EIC that it's interrupt has been handled!
- //otherwise the OS will fall into the dead loop of dealing with "previous" EIC interrupt.   
+{
     turnoff_intc(INTC_COM2);
-	char buffer[4] = "c:";
     char c = bcons_getc();
 	char mode=0;
-	buffer[1] = c;
-    extern void dev_stdin_write(char c);
-    //here we should tell EIC that the serial interrupt has been handled.
-    // xilinx_intc_init();
-    //the following codes are related to "device drivers".
-    // dev_stdin_write(c);
-    PRINT_HEX("\r\ngetchar: ", c);
-	int copy, value;
-	int fd = file_open("/btc", O_CREAT | O_RDWR | O_TRUNC);
-	file_write(fd, "hello world\r\n", 12, &copy);
-	file_close(fd);
+	int value;
 	if(c!=0){
 		value = c;
-		// if(value=='0') mode=0;
-		// else if(value=='1') mode=1;  //4 Q
-		// else if(value=='2') mode=1<<1; // 3 h
-		// else if(value=='3') mode=1<<2; // 4 h
-		// else if(value=='4') mode=1<<3; // 2h
-		// else if(value=='5') mode=1<<4; // 1h
-		// else if(value=='6') mode=1<<5; // 1q
-		// else if(value=='7') mode=1<<6; // 2q
-		// else if(value=='8') mode=1<<7; // 3q
-		// else if(value=='9') mode=CAR_FORWARD;
-		// else mode = CAR_BACKWARD;
 		if(value == 'U') mode = CAR_FORWARD;
 		else if(value == 'D') mode = CAR_BACKWARD;
 		else if(value == 'L') mode = CAR_TURNLEFT;
